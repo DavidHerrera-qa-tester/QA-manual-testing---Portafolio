@@ -172,7 +172,7 @@ The user was rejected, and SauceDemo displays an error message while keeping the
 ### TC-006 Login With Username And Password empty
 
 | Field | Value |
-|---|---|---|
+|---|---|
 | Test Case ID | TC-006 |
 | Module | Login |
 | Title | Password field remains blank |
