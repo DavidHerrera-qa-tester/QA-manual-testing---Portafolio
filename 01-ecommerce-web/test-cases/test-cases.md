@@ -31,6 +31,8 @@ User was redirected to Products page.
 
 #### Evidence
 
+##
+
 ### TC-002 - Login whith invalide password
 
 | Field | value |
@@ -41,7 +43,7 @@ User was redirected to Products page.
 | Priority | High |
 | Type | Functional / Negative |
 | Preconditions | User is on the SauceDemo login page |
-| Status | No executed |
+| Status | Pass |
 
 #### Test Steps
 
@@ -58,9 +60,46 @@ The application should reject the login attempt, display an appropriate error me
 
 #### Actual Result
 
-Not executed.
+The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
 
 #### Evidence
 
 To be added during test execution.
+
+##
+
+### TC-003 — Login with invalid username
+
+| Field | Value |
+|---|---|
+| Test Case ID | TC-003 |
+| Module | Login |
+| Title | Login with invalid username |
+| Priority | High |
+| Type | Functional / Negative |
+| Preconditions | User is on the SauceDemo login page |
+| Test Data | Username: invalid_user_123 / Valid password |
+| Status | pass |
+
+#### Test Steps
+
+| Step | Action | Expected Result |
+|---|---|---|
+| 1 | Open the SauceDemo login page | Login page is displayed |
+| 2 | Enter the invalid username `invalid_user_123` | Username is accepted as input |
+| 3 | Enter the valid password | Password is accepted |
+| 4 | Click the Login button | Login attempt is rejected and an error message is displayed |
+
+#### Expected Result
+
+The application should reject the login attempt and display an appropriate error message. The user should remain on the login page.
+
+#### Actual Result
+
+The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
+
+#### Evidence
+
+To be added during test execution.
+
 
