@@ -171,3 +171,22 @@ The user was rejected, and SauceDemo displays an error message while keeping the
 
 ### TC-006 Login With Username And Password empty
 
+| Field | Value |
+|---|---|---|
+| Test Case ID | TC-006 |
+| Module | Login |
+| Title | Password field remains blank |
+| Priority | High |
+| Type | validation / Negative| 
+| Preconditions | User is on the SauceDemo login page |
+| Test Data | username: blank / blank |
+| Status | na |
+
+#### Test Steps 
+
+| Step | Action | Expected Result |
+|---|---|---|
+| 1 | Open the SauceDemo Login page | Login page is displayed |
+| 2 | leave the empty username | username field remains blank | 
+| 3 | leave the empty password | password field remains blank | 
+| 4 | click on Login button | Login attempt is rejected and an error message is displayed |
