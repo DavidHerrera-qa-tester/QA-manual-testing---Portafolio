@@ -10,7 +10,7 @@
 | Type | Functional / Positive |
 | Preconditions | User is on the SauceDemo login page |
 | Test Data | Valid SauceDemo test credentials |
-| Status | pass |
+| Status | PASS |
 
 #### Test Steps
 
@@ -43,7 +43,7 @@ User was redirected to Products page.
 | Priority | High |
 | Type | Functional / Negative |
 | Preconditions | User is on the SauceDemo login page |
-| Status | Pass |
+| Status | PASS |
 
 #### Test Steps
 
@@ -79,7 +79,7 @@ To be added during test execution.
 | Type | Functional / Negative |
 | Preconditions | User is on the SauceDemo login page |
 | Test Data | Username: invalid_user_123 / Valid password |
-| Status | pass |
+| Status | PASS |
 
 #### Test Steps
 
@@ -102,4 +102,72 @@ The user was rejected, and SauceDemo displays an error message while keeping the
 
 To be added during test execution.
 
+##
+
+### TC-004 — Login with empty username
+
+| Field | Value |
+|---|---|
+| Test Case ID | TC-004 |
+| Module | Login |
+| Title | Login with empty username |
+| Priority | High |
+| Type | Validation / Negative |
+| Preconditions | User is on the SauceDemo login page |
+| Test Data | Username: blank / Valid password |
+| Status | PASS |
+
+#### Test Steps
+
+| Step | Action | Expected Result |
+|---|---|---|
+| 1 | Open the SauceDemo login page | Login page is displayed |
+| 2 | Leave the username field empty | Username field remains blank |
+| 3 | Enter the valid password | Password is accepted |
+| 4 | Click the Login button | Login attempt is rejected and an error message is displayed |
+
+#### Expected Result
+
+The application should reject the login attempt and display an appropriate error message. The user should remain on the login page.
+
+#### Actual Result
+
+The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
+
+##
+
+### TC-005 — Login with empty password
+
+| Field | Value |
+|---|---|
+| Test Case ID | TC-005 |
+| Module | Login |
+| Title | Login with empty password |
+| Priority | High |
+| Type | Validation / Negative |
+| Preconditions | User is on the SauceDemo login page |
+| Test Data | Username: standard_user / blank |
+| Status | PASS |
+
+#### Test Steps
+
+| Step | Action | Expected Result |
+|---|---|---|
+| 1 | Open the SauceDemo login page | Login page is displayed |
+| 2 | Enter the valid user standard_user | Username is accepted |
+| 3 | Leave the empty password | Password field remains blank |
+| 4 | Click the Login button | Login attempt is rejected and an error message is displayed |
+
+#### Expected Result
+
+The SauceDemo page must keep the user on the login page until they enter a password.
+
+It must display the corresponding error message.
+#### Actual Result
+
+The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
+
+##
+
+### TC-006 Login With Username And Password empty
 
