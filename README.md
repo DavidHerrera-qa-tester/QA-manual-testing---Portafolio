@@ -1,1 +1,0 @@
-qa-manual-testing-portfolio/
