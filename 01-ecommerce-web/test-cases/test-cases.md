@@ -190,3 +190,13 @@ The user was rejected, and SauceDemo displays an error message while keeping the
 | 2 | leave the empty username | username field remains blank | 
 | 3 | leave the empty password | password field remains blank | 
 | 4 | click on Login button | Login attempt is rejected and an error message is displayed |
+
+#### Expected Result
+
+The SauceDemo page must keep the user on the login page until they enter a username and password.
+
+It must display the corresponding error message.
+#### Actual Result
+
+The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
+
