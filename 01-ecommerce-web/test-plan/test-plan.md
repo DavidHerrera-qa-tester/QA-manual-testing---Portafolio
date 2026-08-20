@@ -83,8 +83,8 @@ The following testing types will be performed:
 | Application | SauceDemo |
 | Application URL | https://www.saucedemo.com/ |
 | Operating System | Windows 11 Home |
-| Browser | brave |
-| Browser Version | To be documented during execution |
+| Browser | Brave |
+| Browser Version |1.93.137 (Compilación oficial) (64 bits) |
 | Device | Desktop / Mobile viewport |
 | Testing Type | Manual |
 
