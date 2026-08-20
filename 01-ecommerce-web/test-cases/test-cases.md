@@ -29,8 +29,6 @@ The user should successfully log in and be redirected to the Products page.
 
 User was redirected to Products page.
 
-#### Evidence
-
 ##
 
 ### TC-002 - Login whith invalide password
@@ -61,10 +59,6 @@ The application should reject the login attempt, display an appropriate error me
 #### Actual Result
 
 The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
-
-#### Evidence
-
-To be added during test execution.
 
 ##
 
@@ -97,10 +91,6 @@ The application should reject the login attempt and display an appropriate error
 #### Actual Result
 
 The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
-
-#### Evidence
-
-To be added during test execution.
 
 ##
 
@@ -163,6 +153,7 @@ The user was rejected, and SauceDemo displays an error message while keeping the
 The SauceDemo page must keep the user on the login page until they enter a password.
 
 It must display the corresponding error message.
+
 #### Actual Result
 
 The user was rejected, and SauceDemo displays an error message while keeping the user on the login page.
@@ -213,7 +204,7 @@ The user was rejected, and SauceDemo displays an error message while keeping the
 | Type | UI / Security / Positive |
 | Preconditions | User is on the SauceDemo login page |
 | Test Data | Valid test password |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -230,11 +221,7 @@ The password field should mask the entered characters.
 
 #### Actual Result
 
-Not executed.
-
-#### Evidence
-
-TC-007-password-masking.png
+The password field masks the entered characters.
 
 
 ### TC-008 — Logout successfully
@@ -248,7 +235,7 @@ TC-007-password-masking.png
 | Type | Functional / Positive |
 | Preconditions | User is logged in |
 | Test Data | Valid user credentials |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -265,12 +252,9 @@ The user should be successfully logged out and returned to the login page.
 
 #### Actual Result
 
-Not executed.
+The user logged out correctly and was redirected to the login page.
 
-#### Evidence
-
-TC-008-logout.png
-
+##
 
 # Product Test Cases
 
@@ -285,7 +269,7 @@ TC-008-logout.png
 | Type | Functional / UI |
 | Preconditions | User is logged in |
 | Test Data | Valid user |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -301,11 +285,7 @@ The Products page should display the available products correctly.
 
 #### Actual Result
 
-Not executed.
-
-#### Evidence
-
-TC-009-product-list.png
+The page displays the products correctly.
 
 
 ### TC-010 — Display product name
@@ -319,7 +299,7 @@ TC-009-product-list.png
 | Type | UI / Functional |
 | Preconditions | User is on the Products page |
 | Test Data | Available product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -335,11 +315,7 @@ Each product should display a clear product name.
 
 #### Actual Result
 
-Not executed.
-
-#### Evidence
-
-TC-010-product-name.png
+Each product clearly displayed its respective product name.
 
 
 ### TC-011 — Display product price
@@ -353,7 +329,7 @@ TC-010-product-name.png
 | Type | UI / Functional |
 | Preconditions | User is on the Products page |
 | Test Data | Available product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -369,12 +345,9 @@ Each product should display its price clearly.
 
 #### Actual Result
 
-Not executed.
+Each product displays its corresponding price
 
-#### Evidence
-
-TC-011-product-price.png
-
+##
 
 ### TC-012 — Display product image
 
@@ -387,7 +360,7 @@ TC-011-product-price.png
 | Type | UI |
 | Preconditions | User is on the Products page |
 | Test Data | Available product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -403,12 +376,9 @@ Product images should load correctly without broken-image indicators.
 
 #### Actual Result
 
-Not executed.
+All products displayed their product images correctly, without any broken elements or errors.
 
-#### Evidence
-
-TC-012-product-image.png
-
+##
 
 ### TC-013 — Open product details
 
@@ -421,7 +391,7 @@ TC-012-product-image.png
 | Type | Functional |
 | Preconditions | User is on the Products page |
 | Test Data | Available product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -437,12 +407,9 @@ The selected product's detail page should open successfully.
 
 #### Actual Result
 
-Not executed.
+The product detail page opens correctly.
 
-#### Evidence
-
-TC-013-product-details.png
-
+##
 
 ### TC-014 — Return from product details
 
@@ -471,12 +438,9 @@ The user should return to the Products page.
 
 #### Actual Result
 
-Not executed.
+El usuario regresó con éxito a la página del producto.
 
-#### Evidence
-
-TC-014-back-to-products.png
-
+##
 
 ### TC-015 — Sort products by price low to high
 
@@ -489,7 +453,7 @@ TC-014-back-to-products.png
 | Type | Functional |
 | Preconditions | User is on the Products page |
 | Test Data | Sort option: Price low to high |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -506,12 +470,9 @@ Products should be displayed from the lowest price to the highest price.
 
 #### Actual Result
 
-Not executed.
+The products are displayed from lowest to highest price.
 
-#### Evidence
-
-TC-015-price-low-high.png
-
+##
 
 ### TC-016 — Sort products by price high to low
 
@@ -524,7 +485,7 @@ TC-015-price-low-high.png
 | Type | Functional |
 | Preconditions | User is on the Products page |
 | Test Data | Sort option: Price high to low |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -541,12 +502,9 @@ Products should be displayed from the highest price to the lowest price.
 
 #### Actual Result
 
-Not executed.
+The products are displayed from highest to lowest price.
 
-#### Evidence
-
-TC-016-price-high-low.png
-
+##
 
 # Shopping Cart Test Cases
 
@@ -561,7 +519,7 @@ TC-016-price-high-low.png
 | Type | Functional / Positive |
 | Preconditions | User is on the Products page |
 | Test Data | Any available product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -577,12 +535,9 @@ The selected product should be added to the shopping cart.
 
 #### Actual Result
 
-Not executed.
+The selected product has been added to the shopping cart.
 
-#### Evidence
-
-TC-017-add-product.png
-
+##
 
 ### TC-018 — Add multiple products to cart
 
@@ -595,7 +550,7 @@ TC-017-add-product.png
 | Type | Functional |
 | Preconditions | User is on the Products page |
 | Test Data | Two or more available products |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -611,12 +566,9 @@ All selected products should be added to the cart.
 
 #### Actual Result
 
-Not executed.
+All selected products have been successfully added to the shopping cart.
 
-#### Evidence
-
-TC-018-multiple-products.png
-
+##
 
 ### TC-019 — Verify cart item counter
 
@@ -629,7 +581,7 @@ TC-018-multiple-products.png
 | Type | Functional / UI |
 | Preconditions | User is on the Products page |
 | Test Data | One product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -644,12 +596,9 @@ The cart counter should accurately reflect the number of products added.
 
 #### Actual Result
 
-Not executed.
+The cart counter shows the correct quantities of products added to the cart.
 
-#### Evidence
-
-TC-019-cart-counter.png
-
+##
 
 ### TC-020 — Open shopping cart
 
@@ -662,7 +611,7 @@ TC-019-cart-counter.png
 | Type | Navigation / Functional |
 | Preconditions | User has at least one product in the cart |
 | Test Data | One product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -678,12 +627,9 @@ The shopping cart should open and display the selected product.
 
 #### Actual Result
 
-Not executed.
+The shopping cart opens and displays the added products.
 
-#### Evidence
-
-TC-020-open-cart.png
-
+##
 
 ### TC-021 — Verify product in cart
 
@@ -696,7 +642,7 @@ TC-020-open-cart.png
 | Type | Functional |
 | Preconditions | Product has been added to cart |
 | Test Data | Selected product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -712,12 +658,9 @@ The product displayed in the cart should match the product selected on the Produ
 
 #### Actual Result
 
-Not executed.
+The shopping cart opens and displays the added products corresponding to the selection.
 
-#### Evidence
-
-TC-021-cart-product.png
-
+##
 
 ### TC-022 — Verify product price in cart
 
@@ -730,7 +673,7 @@ TC-021-cart-product.png
 | Type | Functional |
 | Preconditions | Product has been added to cart |
 | Test Data | Selected product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -746,11 +689,9 @@ The product price displayed in the cart should match the price shown on the Prod
 
 #### Actual Result
 
-Not executed.
+The price shown in the cart is the same as the one shown on the homepage.
 
-#### Evidence
-
-TC-022-cart-price.png
+##
 
 
 ### TC-023 — Remove product from cart
@@ -764,7 +705,7 @@ TC-022-cart-price.png
 | Type | Functional |
 | Preconditions | Cart contains a product |
 | Test Data | One product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -781,12 +722,9 @@ The selected product should be removed from the shopping cart.
 
 #### Actual Result
 
-Not executed.
+The selected product has been removed from the shopping cart.
 
-#### Evidence
-
-TC-023-remove-product.png
-
+##
 
 ### TC-024 — Verify empty cart
 
@@ -799,7 +737,7 @@ TC-023-remove-product.png
 | Type | Functional |
 | Preconditions | Cart contains at least one product |
 | Test Data | One product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -815,12 +753,9 @@ The cart should be empty after all products are removed.
 
 #### Actual Result
 
-Not executed.
+The cart is completely empty after removing all products.
 
-#### Evidence
-
-TC-024-empty-cart.png
-
+##
 
 # Checkout Test Cases
 
@@ -835,7 +770,7 @@ TC-024-empty-cart.png
 | Type | Functional |
 | Preconditions | Cart contains at least one product |
 | Test Data | One product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -851,12 +786,9 @@ The user should be redirected to the checkout information page.
 
 #### Actual Result
 
-Not executed.
+The user was successfully redirected to the payment information page.
 
-#### Evidence
-
-TC-025-start-checkout.png
-
+##
 
 ### TC-026 — Checkout with valid information
 
@@ -869,7 +801,7 @@ TC-025-start-checkout.png
 | Type | Functional / Positive |
 | Preconditions | Cart contains a product |
 | Test Data | First Name: Test / Last Name: User / Postal Code: 110111 |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -887,12 +819,9 @@ The user should proceed successfully to the checkout overview.
 
 #### Actual Result
 
-Not executed.
+The user successfully accesses the purchase summary.
 
-#### Evidence
-
-TC-026-valid-checkout.png
-
+##
 
 ### TC-027 — Checkout with empty first name
 
@@ -905,7 +834,7 @@ TC-026-valid-checkout.png
 | Type | Validation / Negative |
 | Preconditions | User is on the checkout information page |
 | Test Data | First Name: blank / Last Name: User / Postal Code: 110111 |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -922,12 +851,9 @@ The checkout process should not continue and an appropriate validation message s
 
 #### Actual Result
 
-Not executed.
+The payment process does not continue, and an appropriate validation message is displayed.
 
-#### Evidence
-
-TC-027-empty-first-name.png
-
+##
 
 ### TC-028 — Checkout with empty last name
 
@@ -940,7 +866,7 @@ TC-027-empty-first-name.png
 | Type | Validation / Negative |
 | Preconditions | User is on the checkout information page |
 | Test Data | First Name: Test / Last Name: blank / Postal Code: 110111 |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -957,12 +883,9 @@ The checkout process should not continue and an appropriate validation message s
 
 #### Actual Result
 
-Not executed.
+The payment process does not proceed, and an appropriate validation message is displayed.
 
-#### Evidence
-
-TC-028-empty-last-name.png
-
+##
 
 ### TC-029 — Checkout with empty postal code
 
@@ -975,7 +898,7 @@ TC-028-empty-last-name.png
 | Type | Validation / Negative |
 | Preconditions | User is on the checkout information page |
 | Test Data | First Name: Test / Last Name: User / Postal Code: blank |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -992,12 +915,9 @@ The checkout process should not continue and an appropriate validation message s
 
 #### Actual Result
 
-Not executed.
+The payment process does not proceed, and an appropriate validation message is displayed.
 
-#### Evidence
-
-TC-029-empty-postal-code.png
-
+##
 
 ### TC-030 — Checkout with all required fields empty
 
@@ -1010,7 +930,7 @@ TC-029-empty-postal-code.png
 | Type | Validation / Negative |
 | Preconditions | User is on the checkout information page |
 | Test Data | First Name: blank / Last Name: blank / Postal Code: blank |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1026,12 +946,9 @@ The checkout process should not continue and an appropriate validation message s
 
 #### Actual Result
 
-Not executed.
+The payment process does not proceed, and an appropriate validation message is displayed.
 
-#### Evidence
-
-TC-030-empty-checkout.png
-
+##
 
 ### TC-031 — Verify checkout overview
 
@@ -1044,7 +961,7 @@ TC-030-empty-checkout.png
 | Type | Functional |
 | Preconditions | Valid checkout information has been submitted |
 | Test Data | Valid checkout data |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1058,14 +975,9 @@ TC-030-empty-checkout.png
 
 The checkout overview should display the correct order information before completion.
 
-#### Actual Result
+The purchase process summary showed the correct order information before finalizing it.
 
-Not executed.
-
-#### Evidence
-
-TC-031-checkout-overview.png
-
+##
 
 ### TC-032 — Verify subtotal
 
@@ -1078,7 +990,7 @@ TC-031-checkout-overview.png
 | Type | Functional / Calculation |
 | Preconditions | Checkout overview is displayed |
 | Test Data | One or more products |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1095,11 +1007,9 @@ The displayed subtotal should equal the sum of the product prices.
 
 #### Actual Result
 
-Not executed.
+The subtotal shown is equal to the sum of the product prices.
 
-#### Evidence
-
-TC-032-subtotal.png
+##
 
 
 ### TC-033 — Verify tax
@@ -1113,7 +1023,7 @@ TC-032-subtotal.png
 | Type | Functional / Calculation |
 | Preconditions | Checkout overview is displayed |
 | Test Data | One or more products |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1129,12 +1039,9 @@ The displayed tax should be calculated correctly according to the application's 
 
 #### Actual Result
 
-Not executed.
+The displayed tax was calculated correctly in accordance with the calculation configured in the application.
 
-#### Evidence
-
-TC-033-tax.png
-
+##
 
 ### TC-034 — Verify order total
 
@@ -1147,7 +1054,7 @@ TC-033-tax.png
 | Type | Functional / Calculation |
 | Preconditions | Checkout overview is displayed |
 | Test Data | One or more products |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1164,12 +1071,9 @@ The displayed order total should equal the subtotal plus the displayed tax.
 
 #### Actual Result
 
-Not executed.
+The displayed order total is equal to the subtotal plus the displayed tax.
 
-#### Evidence
-
-TC-034-order-total.png
-
+##
 
 # Navigation and Responsive Test Cases
 
@@ -1184,7 +1088,7 @@ TC-034-order-total.png
 | Type | UI / Navigation |
 | Preconditions | User is logged in |
 | Test Data | Desktop browser |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1200,12 +1104,9 @@ Navigation elements should be visible, accessible, and functional on desktop.
 
 #### Actual Result
 
-Not executed.
+The navigation elements are visible, accessible, and functional on desktop computers.
 
-#### Evidence
-
-TC-035-desktop-navigation.png
-
+##
 
 ### TC-036 — Verify mobile viewport layout
 
@@ -1218,7 +1119,7 @@ TC-035-desktop-navigation.png
 | Type | Responsive / UI |
 | Preconditions | Application is open in Chrome DevTools |
 | Test Data | Mobile viewport |
-| Status | NOT EXECUTED |
+| Status | FAIL |
 
 #### Test Steps
 
@@ -1235,11 +1136,11 @@ The application should remain usable and readable within the selected mobile vie
 
 #### Actual Result
 
-Not executed.
+Product images do not maintain a constant aspect ratio on mobile devices; the relationship between width and height is lost, causing them to appear differently on each mobile device.
 
 #### Evidence
 
-TC-036-mobile.png
+TC-036.png
 
 
 ### TC-037 — Verify navigation menu
@@ -1253,7 +1154,7 @@ TC-036-mobile.png
 | Type | Functional / UI |
 | Preconditions | User is logged in |
 | Test Data | Valid user |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1269,12 +1170,9 @@ The navigation menu should open and display its available options correctly.
 
 #### Actual Result
 
-Not executed.
+The navigation menu opens and correctly displays its available options.
 
-#### Evidence
-
-TC-037-menu.png
-
+##
 
 ### TC-038 — Verify cart button navigation
 
@@ -1287,7 +1185,7 @@ TC-037-menu.png
 | Type | Functional / Navigation |
 | Preconditions | User is logged in |
 | Test Data | At least one product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1303,12 +1201,9 @@ The cart button should navigate the user to the shopping cart.
 
 #### Actual Result
 
-Not executed.
+The cart button takes the user to the shopping cart.
 
-#### Evidence
-
-TC-038-cart-navigation.png
-
+##
 
 ### TC-039 — Navigate between Products and Cart
 
@@ -1321,7 +1216,7 @@ TC-038-cart-navigation.png
 | Type | Navigation |
 | Preconditions | User is logged in |
 | Test Data | One product |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1338,12 +1233,9 @@ The user should be able to navigate between Products and Cart without unexpected
 
 #### Actual Result
 
-Not executed.
+The user can navigate between Products and the cart without errors.
 
-#### Evidence
-
-TC-039-navigation.png
-
+##
 
 ### TC-040 — Verify mobile viewport for horizontal overflow
 
@@ -1356,7 +1248,7 @@ TC-039-navigation.png
 | Type | Responsive / UI |
 | Preconditions | Application is open in a mobile viewport |
 | Test Data | Mobile viewport |
-| Status | NOT EXECUTED |
+| Status | PASS |
 
 #### Test Steps
 
@@ -1372,10 +1264,7 @@ The application should not display unexpected horizontal overflow that interfere
 
 #### Actual Result
 
-Not executed.
+The application does not exhibit unexpected horizontal overflow that interferes with usability.
 
-#### Evidence
-
-TC-040-horizontal-overflow.png
 
 
