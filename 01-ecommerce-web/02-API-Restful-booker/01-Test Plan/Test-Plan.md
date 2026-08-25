@@ -10,33 +10,9 @@
 **Colección:** `proyecto-02 API`  
 **Fecha de ejecución de referencia:** 24 de agosto de 2026
 
-Este documento consolida los 13 casos de prueba ejecutados en Postman. La información se basa en la evidencia proporcionada del proyecto, incluyendo requests, request bodies, respuestas, assertions y resultados observados.
-
-> **Nota de trazabilidad:** los Expected Results de los casos negativos reflejan las reglas de validación planteadas para el ejercicio. Cuando el comportamiento observado no coincide, el caso queda como FAIL y se relaciona con un posible defecto. En TC-API-011 se deja explícito que la aceptación de caracteres especiales requiere confirmar el requisito funcional antes de registrar un bug.
-
 ---
 
-## 2. Criterios usados para documentar cada caso
 
-Cada Test Case contiene:
-
-- ID
-- Título
-- Tipo de prueba
-- Prioridad
-- Objetivo
-- Precondiciones
-- Método HTTP
-- Endpoint
-- Datos de prueba
-- Pasos
-- Resultado esperado
-- Resultado actual
-- Assertions
-- Estado
-- Defecto relacionado, cuando aplica
-
----
 
 # 3. Test Cases
 
