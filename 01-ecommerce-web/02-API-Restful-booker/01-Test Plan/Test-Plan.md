@@ -8,8 +8,8 @@
 **Colección:** `proyecto-02 API`  
 **Fecha de ejecución de referencia:** 24 de agosto de 2026
 
----
 
+---
 
 
 # 3. Test Cases
@@ -23,20 +23,20 @@
 Verificar que la API permita consultar correctamente una reserva existente mediante su ID.
 
 ### Preconditions
-La API está disponible y existe una reserva con ID `1`.
+La API está disponible y existe una reserva con ID `2`.
 
 ### Request
 ```http
-GET /booking/1
+GET /booking/2
 ```
 
 ### Test Data
 ```text
-Booking ID: 1
+Booking ID: 2
 ```
 
 ### Steps
-1. Enviar una petición `GET` a `/booking/1`.
+1. Enviar una petición `GET` a `/booking/2`.
 2. Observar el código de respuesta.
 3. Validar la estructura básica del response body.
 
@@ -321,8 +321,6 @@ DELETE /booking/{{bookingId}}
 ### Defect
 N/A
 
-> **Nota:** para una mejora futura del proyecto, conviene añadir una verificación posterior con `GET` para comprobar que el recurso eliminado ya no está disponible.
-
 ---
 
 ## TC-API-007 — Create booking with missing firstname
@@ -549,8 +547,6 @@ El nombre contiene caracteres especiales.
 ### Defect
 **Pendiente de clasificación**
 
-> **Importante:** no registrar este comportamiento como bug definitivo hasta confirmar que realmente existe un requisito que prohíbe caracteres especiales en nombres. Si el sistema permite esos caracteres, debe corregirse el Expected Result del test y reclasificarse como PASS.
-
 ---
 
 ## TC-API-012 — Create booking with zero or negative price
@@ -673,23 +669,3 @@ N/A
 | BUG-004 | TC-API-012 | Precio 0/negativo provoca HTTP 500 | High |
 
 **TC-API-011:** clasificación pendiente de requisito.
-
----
-
-# 6. Mejoras recomendadas para la siguiente iteración
-
-Para fortalecer el proyecto antes de publicarlo definitivamente en GitHub:
-
-1. Añadir validación del body en los casos negativos, no solo del status code.
-2. Añadir un `GET` posterior al `DELETE` para comprobar que la reserva realmente fue eliminada.
-3. Mantener el uso de `{{bookingId}}` para encadenar requests.
-4. Añadir validaciones de tipos de datos donde aporten valor.
-5. Confirmar el requisito de caracteres especiales antes de registrar BUG-005.
-6. Guardar evidencia de cada caso y, especialmente, de los defectos.
-7. Corregir definitivamente la numeración y mantener la secuencia `TC-API-001` a `TC-API-013`.
-
----
-
-## 7. Trazabilidad de evidencia
-
-Las capturas y resultados usados para elaborar este documento provienen de la evidencia proporcionada del proyecto en Postman. 
