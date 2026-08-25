@@ -6,7 +6,7 @@
 **Base URL:** `https://restful-booker.herokuapp.com`  
 **Herramienta:** Postman  
 **Colección:** `proyecto-02 API`  
-**Fecha de ejecución de referencia:** 24 de agosto de 2026
+**Fecha de ejecución:** 24 de agosto de 2026
 
 
 ---
