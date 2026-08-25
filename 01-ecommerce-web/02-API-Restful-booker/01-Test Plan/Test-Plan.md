@@ -646,8 +646,6 @@ N/A
 | Pendiente de requisito | 1 caso dentro de los FAIL |
 | Total de casos | 13 |
 
-> Nota: TC-API-011 se contabiliza como FAIL frente al Expected Result actualmente configurado, pero su clasificación como bug queda pendiente de confirmar el requisito sobre caracteres especiales.
-
 ## Cobertura por método
 
 | Método | Cantidad |
@@ -668,4 +666,4 @@ N/A
 | BUG-003 | TC-API-010 | Check-in posterior a checkout aceptado | High |
 | BUG-004 | TC-API-012 | Precio 0/negativo provoca HTTP 500 | High |
 
-**TC-API-011:** clasificación pendiente de requisito.
+**TC-API-011:** clasificación pendiente debido a faltas de requisitos.
