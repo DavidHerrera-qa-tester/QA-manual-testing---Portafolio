@@ -637,16 +637,7 @@ N/A
 
 # 4. Resumen de ejecución
 
-## Resultados observados
-
-| Resultado | Cantidad |
-|---|---:|
-| PASS | 9 |
-| FAIL | 4 |
-| Pendiente de requisito | 1 caso dentro de los FAIL |
-| Total de casos | 13 |
-
-## Cobertura por método
+## Método utilizado
 
 | Método | Cantidad |
 |---|---:|
