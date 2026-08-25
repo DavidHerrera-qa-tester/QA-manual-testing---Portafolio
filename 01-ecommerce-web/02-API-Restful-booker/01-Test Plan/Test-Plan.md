@@ -1,6 +1,4 @@
-[API-Test-Cases.md](https://github.com/user-attachments/files/31427075/API-Test-Cases.md)
-
-# API Test Cases — Proyecto 02
+# API Test Cases — 
 
 ## 1. Información general
 
