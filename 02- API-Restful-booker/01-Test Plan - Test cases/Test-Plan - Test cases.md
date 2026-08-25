@@ -1,135 +1,171 @@
-# API Test Cases — 
+# API Test Cases —
 
-## 1. Información general
+## 1. General Information
 
-**API bajo prueba:** Restful-Booker  
-**Base URL:** `https://restful-booker.herokuapp.com`  
-**Herramienta:** Postman  
-**Colección:** `proyecto-02 API`  
-**Fecha de ejecución:** 24 de agosto de 2026
+**API under test:** Restful-Booker
 
+**Base URL:** `[https://restful-booker.herokuapp.com](https://restful-booker.herokuapp.com)`
+
+**Tool:** Postman
+
+**Collection:** `proyecto-02 API`
+
+**Execution Date:** August 24, 2026
 
 ---
-
 
 # 3. Test Cases
 
 ## TC-API-001 — Get existing booking
 
-**Type:** Positive  
+**Type:** Positive
+
 **Priority:** High
 
 ### Objective
-Verificar que la API permita consultar correctamente una reserva existente mediante su ID.
+
+Verify that the API allows correctly retrieving an existing booking by its ID.
 
 ### Preconditions
-La API está disponible y existe una reserva con ID `2`.
+
+The API is available and a booking with ID `2` exists.
 
 ### Request
+
 ```http
 GET /booking/2
+
 ```
 
 ### Test Data
+
 ```text
 Booking ID: 2
+
 ```
 
 ### Steps
-1. Enviar una petición `GET` a `/booking/2`.
-2. Observar el código de respuesta.
-3. Validar la estructura básica del response body.
+
+1. Send a `GET` request to `/booking/2`.
+2. Observe the status code.
+3. Validate the basic structure of the response body.
 
 ### Expected Result
-- HTTP `200 OK`.
-- La respuesta contiene información de la reserva.
-- Deben existir los campos `firstname`, `lastname`, `totalprice`, `depositpaid` y `bookingdates`.
+
+* HTTP `200 OK`.
+* The response contains booking information.
+* The fields `firstname`, `lastname`, `totalprice`, `depositpaid`, and `bookingdates` must exist.
 
 ### Actual Result
-- HTTP `200 OK`.
-- La respuesta contiene una reserva con:
-  - `firstname`: `Eric`
-  - `lastname`: `Smith`
-  - `totalprice`: `887`
-  - `depositpaid`: `false`
-  - `checkin`: `2024-02-13`
-  - `checkout`: `2024-05-21`
+
+* HTTP `200 OK`.
+* The response contains a booking with:
+* `firstname`: `Eric`
+* `lastname`: `Smith`
+* `totalprice`: `887`
+* `depositpaid`: `false`
+* `checkin`: `2024-02-13`
+* `checkout`: `2024-05-21`
+
+
 
 ### Assertions
+
 1. Status code = `200`.
-2. El response contiene datos de booking.
-3. El response contiene la estructura/campos esperados.
+2. The response contains booking data.
+3. The response contains the expected structure/fields.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
 ## TC-API-002 — Get non-existing booking
 
-**Type:** Negative  
+**Type:** Negative
+
 **Priority:** High
 
 ### Objective
-Verificar que la API maneje correctamente la consulta de una reserva que no existe.
+
+Verify that the API correctly handles retrieving a non-existent booking.
 
 ### Preconditions
-La API está disponible. El ID utilizado no corresponde a una reserva existente.
+
+The API is available. The ID used does not correspond to an existing booking.
 
 ### Request
+
 ```http
 GET /booking/99999
+
 ```
 
 ### Test Data
+
 ```text
 Booking ID: 99999
+
 ```
 
 ### Steps
-1. Enviar una petición `GET` a `/booking/99999`.
-2. Observar el código HTTP.
-3. Revisar el response body.
+
+1. Send a `GET` request to `/booking/99999`.
+2. Observe the HTTP code.
+3. Review the response body.
 
 ### Expected Result
-- HTTP `404 Not Found`.
-- La respuesta indica que la reserva no fue encontrada.
+
+* HTTP `404 Not Found`.
+* The response indicates that the booking was not found.
 
 ### Actual Result
-- HTTP `404 Not Found`.
-- Body observado: `Not Found`.
+
+* HTTP `404 Not Found`.
+* Observed body: `Not Found`.
 
 ### Assertions
+
 1. Status code = `404`.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
 ## TC-API-003 — Create new booking
 
-**Type:** Positive  
+**Type:** Positive
+
 **Priority:** High
 
 ### Objective
-Verificar que la API cree correctamente una nueva reserva y devuelva un identificador para el recurso creado.
+
+Verify that the API correctly creates a new booking and returns an identifier for the created resource.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Request Body
+
 ```json
 {
   "firstname": "Juan",
@@ -141,105 +177,131 @@ POST /booking
     "checkout": "2026-09-05"
   }
 }
+
 ```
 
 ### Steps
-1. Enviar la petición `POST /booking`.
-2. Revisar el status code.
-3. Verificar que exista `bookingid`.
-4. Verificar que exista el objeto `booking`.
-5. Guardar el `bookingid` para utilizarlo en requests posteriores.
+
+1. Send the `POST /booking` request.
+2. Review the status code.
+3. Verify that `bookingid` exists.
+4. Verify that the `booking` object exists.
+5. Save the `bookingid` to use in subsequent requests.
 
 ### Expected Result
-- La API acepta la solicitud.
-- HTTP `200 OK` según el comportamiento observado/documentado en este ejercicio.
-- La respuesta contiene `bookingid`.
-- La respuesta contiene el objeto `booking`.
+
+* The API accepts the request.
+* HTTP `200 OK` according to the behavior observed/documented in this exercise.
+* The response contains `bookingid`.
+* The response contains the `booking` object.
 
 ### Actual Result
-- HTTP `200 OK`.
-- `bookingid` generado: `2173` en la ejecución evidenciada.
-- El response contiene el objeto `booking`.
+
+* HTTP `200 OK`.
+* Generated `bookingid`: `2173` in the evidenced execution.
+* The response contains the `booking` object.
 
 ### Assertions
+
 1. Status code = `200`.
 2. `bookingid` exists.
 3. `booking` object exists.
-4. El `bookingid` se guarda para requests posteriores.
+4. The `bookingid` is saved for subsequent requests.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
 ## TC-API-004 — Get booking by ID
 
-**Type:** Positive / Integration flow  
+**Type:** Positive / Integration flow
+
 **Priority:** High
 
 ### Objective
-Verificar que la reserva creada mediante TC-API-003 pueda recuperarse utilizando el ID generado.
+
+Verify that the booking created via TC-API-003 can be retrieved using the generated ID.
 
 ### Preconditions
-TC-API-003 ejecutado y `bookingId` disponible como variable de Postman.
+
+TC-API-003 executed and `bookingId` available as a Postman variable.
 
 ### Request
+
 ```http
 GET /booking/{{bookingId}}
+
 ```
 
 ### Test Data
+
 ```text
-bookingId: valor generado por TC-API-003
+bookingId: value generated by TC-API-003
+
 ```
 
 ### Steps
-1. Ejecutar previamente TC-API-003.
-2. Obtener el `bookingId` generado.
-3. Enviar `GET /booking/{{bookingId}}`.
-4. Validar la respuesta.
+
+1. Execute TC-API-003 previously.
+2. Obtain the generated `bookingId`.
+3. Send `GET /booking/{{bookingId}}`.
+4. Validate the response.
 
 ### Expected Result
-- HTTP `200 OK`.
-- La respuesta corresponde a la reserva creada.
-- Los datos principales coinciden con la reserva creada.
+
+* HTTP `200 OK`.
+* The response corresponds to the created booking.
+* Main data matches the created booking.
 
 ### Actual Result
-- HTTP `200 OK`.
-- El response devuelve la reserva creada con los datos de Juan Perez.
+
+* HTTP `200 OK`.
+* The response returns the created booking with Juan Perez's data.
 
 ### Assertions
+
 1. Status code = `200`.
-2. Se valida que la reserva recuperada corresponde a la creada.
+2. Verified that the retrieved booking corresponds to the one created.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
 ## TC-API-005 — Update a reservation
 
-**Type:** Positive  
+**Type:** Positive
+
 **Priority:** High
 
 ### Objective
-Verificar que una reserva existente pueda actualizarse correctamente mediante `PUT`.
+
+Verify that an existing booking can be correctly updated using `PUT`.
 
 ### Preconditions
-Existe una reserva válida y se dispone de `bookingId`.
+
+A valid booking exists and `bookingId` is available.
 
 ### Request
+
 ```http
 PUT /booking/{{bookingId}}
+
 ```
 
 ### Request Body
+
 ```json
 {
   "firstname": "Juan",
@@ -251,98 +313,125 @@ PUT /booking/{{bookingId}}
     "checkout": "2026-10-05"
   }
 }
+
 ```
 
 ### Steps
-1. Seleccionar una reserva existente.
-2. Enviar `PUT /booking/{{bookingId}}` con los nuevos valores.
-3. Verificar el status code.
-4. Comparar los datos devueltos con los valores enviados.
+
+1. Select an existing booking.
+2. Send `PUT /booking/{{bookingId}}` with the new values.
+3. Verify the status code.
+4. Compare the returned data against the sent values.
 
 ### Expected Result
-- HTTP `200 OK`.
-- La reserva queda actualizada con los nuevos datos.
+
+* HTTP `200 OK`.
+* The booking is updated with the new data.
 
 ### Actual Result
-- HTTP `200 OK`.
-- La respuesta refleja:
-  - `totalprice`: `600`
-  - `depositpaid`: `false`
-  - `checkin`: `2026-10-01`
-  - `checkout`: `2026-10-05`
+
+* HTTP `200 OK`.
+* The response reflects:
+* `totalprice`: `600`
+* `depositpaid`: `false`
+* `checkin`: `2026-10-01`
+* `checkout`: `2026-10-05`
+
+
 
 ### Assertions
+
 1. Status code = `200`.
-2. Los campos actualizados coinciden con los valores esperados.
+2. Updated fields match the expected values.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
 ## TC-API-006 — Delete a reservation
 
-**Type:** Positive / CRUD  
+**Type:** Positive / CRUD
+
 **Priority:** High
 
 ### Objective
-Verificar que una reserva existente pueda eliminarse correctamente.
+
+Verify that an existing booking can be correctly deleted.
 
 ### Preconditions
-Existe una reserva válida y se dispone de `bookingId`.
+
+A valid booking exists and `bookingId` is available.
 
 ### Request
+
 ```http
 DELETE /booking/{{bookingId}}
+
 ```
 
 ### Steps
-1. Seleccionar una reserva existente.
-2. Enviar la petición `DELETE`.
-3. Observar el código HTTP y el body.
+
+1. Select an existing booking.
+2. Send the `DELETE` request.
+3. Observe the HTTP code and body.
 
 ### Expected Result
-- La API procesa correctamente la eliminación.
-- El código esperado para esta ejecución es `201 Created`.
+
+* The API correctly processes the deletion.
+* Expected status code for this execution is `201 Created`.
 
 ### Actual Result
-- HTTP `201 Created`.
-- Body observado: `Created`.
+
+* HTTP `201 Created`.
+* Observed body: `Created`.
 
 ### Assertions
+
 1. Status code = `201`.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
 ## TC-API-007 — Create booking with missing firstname
 
-**Type:** Negative / Validation  
+**Type:** Negative / Validation
+
 **Priority:** High
 
 ### Objective
-Verificar que la API rechace una solicitud de creación cuando falta el campo obligatorio `firstname`.
+
+Verify that the API rejects a creation request when the mandatory field `firstname` is missing.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Test Data
-El campo `firstname` se omite del JSON.
 
-Ejemplo de body:
+The field `firstname` is omitted from the JSON.
+
+Example body:
+
 ```json
 {
   "lastname": "Perez",
@@ -353,294 +442,373 @@ Ejemplo de body:
     "checkout": "2026-09-05"
   }
 }
+
 ```
 
 ### Steps
-1. Enviar `POST /booking`.
-2. Omitir `firstname`.
-3. Observar la respuesta.
+
+1. Send `POST /booking`.
+2. Omit `firstname`.
+3. Observe the response.
 
 ### Expected Result
-- HTTP `400 Bad Request`.
-- La API debe manejar el error de validación de forma controlada.
+
+* HTTP `400 Bad Request`.
+* The API must handle the validation error in a controlled manner.
 
 ### Actual Result
-- HTTP `500 Internal Server Error`.
-- Body observado: `Internal Server Error`.
+
+* HTTP `500 Internal Server Error`.
+* Observed body: `Internal Server Error`.
 
 ### Assertions
-1. Status code esperado = `400`.
+
+1. Expected status code = `400`.
 
 ### Status
+
 **FAIL**
 
 ### Defect
+
 **BUG-001 — Missing required firstname returns 500 Internal Server Error**
 
 ---
 
 ## TC-API-008 — Create booking with incorrect data type
 
-**Type:** Negative / Validation  
+**Type:** Negative / Validation
+
 **Priority:** Medium
 
 ### Objective
-Verificar que la API rechace una solicitud cuando un campo recibe un tipo de dato incorrecto.
+
+Verify that the API rejects a request when a field receives an incorrect data type.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Test Data
-`totalprice` se envía como texto en lugar de número.
+
+`totalprice` is sent as text instead of a number.
 
 ### Steps
-1. Enviar la petición con `totalprice` utilizando un tipo de dato incorrecto.
-2. Observar el status code y response body.
+
+1. Send the request with `totalprice` using an incorrect data type.
+2. Observe the status code and response body.
 
 ### Expected Result
-- HTTP `400 Bad Request`.
-- La API debe rechazar el tipo de dato inválido.
+
+* HTTP `400 Bad Request`.
+* The API must reject the invalid data type.
 
 ### Actual Result
-- HTTP `400 Bad Request`.
-- Body observado: `Bad Request`.
+
+* HTTP `400 Bad Request`.
+* Observed body: `Bad Request`.
 
 ### Assertions
+
 1. Status code = `400`.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
 ## TC-API-009 — Create booking with invalid date
 
-**Type:** Negative / Data validation  
+**Type:** Negative / Data validation
+
 **Priority:** High
 
 ### Objective
-Verificar que la API rechace fechas inválidas o mal formadas.
+
+Verify that the API rejects invalid or malformed dates.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Test Data
-Se utiliza una fecha inválida en `bookingdates`.
+
+An invalid date is used in `bookingdates`.
 
 ### Steps
-1. Enviar la solicitud con una fecha inválida.
-2. Observar el status code.
-3. Inspeccionar el response body.
+
+1. Send the request with an invalid date.
+2. Observe the status code.
+3. Inspect the response body.
 
 ### Expected Result
-- HTTP `400 Bad Request`.
-- La API debe rechazar la fecha inválida.
+
+* HTTP `400 Bad Request`.
+* The API must reject the invalid date.
 
 ### Actual Result
-- HTTP `200 OK`.
-- La respuesta procesa la solicitud y genera valores de fecha inválidos, observándose `NaN-undefined-NaN`.
+
+* HTTP `200 OK`.
+* The response processes the request and generates invalid date values, observing `NaN-undefined-NaN`.
 
 ### Assertions
-1. Status code esperado = `400`.
+
+1. Expected status code = `400`.
 
 ### Status
+
 **FAIL**
 
 ### Defect
+
 **BUG-002 — Invalid date is accepted and produces invalid date values**
 
 ---
 
 ## TC-API-010 — Create booking with check-in after check-out
 
-**Type:** Negative / Business validation  
+**Type:** Negative / Business validation
+
 **Priority:** High
 
 ### Objective
-Verificar que la API rechace una reserva cuyo `checkin` ocurre después de `checkout`.
+
+Verify that the API rejects a booking where `checkin` occurs after `checkout`.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Test Data
-La fecha de check-in se establece después de la fecha de check-out.
+
+The check-in date is set after the check-out date.
 
 ### Steps
-1. Enviar una reserva con `checkin > checkout`.
-2. Observar el status code.
-3. Revisar si la reserva es aceptada.
+
+1. Send a booking with `checkin > checkout`.
+2. Observe the status code.
+3. Check if the booking is accepted.
 
 ### Expected Result
-- HTTP `400 Bad Request`.
-- La API debe rechazar la combinación de fechas inválida.
+
+* HTTP `400 Bad Request`.
+* The API must reject the invalid date combination.
 
 ### Actual Result
-- HTTP `200 OK`.
-- La API acepta la solicitud.
+
+* HTTP `200 OK`.
+* The API accepts the request.
 
 ### Assertions
-1. Status code esperado = `400`.
+
+1. Expected status code = `400`.
 
 ### Status
+
 **FAIL**
 
 ### Defect
+
 **BUG-003 — API accepts check-in date after check-out date**
 
 ---
 
 ## TC-API-011 — Create booking with special characters in name
 
-**Type:** Negative / Boundary validation  
+**Type:** Negative / Boundary validation
+
 **Priority:** Medium
 
 ### Objective
-Verificar el comportamiento de la API cuando el nombre contiene caracteres especiales.
+
+Verify the behavior of the API when the name contains special characters.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Test Data
-El nombre contiene caracteres especiales.
+
+The name contains special characters.
 
 ### Steps
-1. Enviar una reserva cuyo nombre contiene caracteres especiales.
-2. Observar el status code.
-3. Revisar el valor devuelto.
+
+1. Send a booking where the name contains special characters.
+2. Observe the status code.
+3. Review the returned value.
 
 ### Expected Result
-**Según la regla planteada para este test:** HTTP `400 Bad Request`.
+
+**According to the rule set for this test:** HTTP `400 Bad Request`.
 
 ### Actual Result
-- HTTP `200 OK`.
-- La API acepta y conserva los caracteres especiales.
+
+* HTTP `200 OK`.
+* The API accepts and retains special characters.
 
 ### Assertions
-1. Status code esperado = `400`.
+
+1. Expected status code = `400`.
 
 ### Status
-**FAIL — Requiere validación del requisito**
+
+**FAIL — Requires requirement validation**
 
 ### Defect
-**Pendiente de clasificación**
+
+**Pending classification**
 
 ---
 
 ## TC-API-012 — Create booking with zero or negative price
 
-**Type:** Negative / Boundary validation  
+**Type:** Negative / Boundary validation
+
 **Priority:** High
 
 ### Objective
-Verificar que la API rechace precios con valores `0` o negativos.
+
+Verify that the API rejects prices with `0` or negative values.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Test Data
-`totalprice` con valor `0` o negativo.
+
+`totalprice` with `0` or negative value.
 
 ### Steps
-1. Enviar una reserva con precio inválido.
-2. Observar el status code.
-3. Revisar el response body.
+
+1. Send a booking with an invalid price.
+2. Observe the status code.
+3. Review the response body.
 
 ### Expected Result
-- HTTP `400 Bad Request`.
-- La API debe manejar el dato inválido como un error de validación.
+
+* HTTP `400 Bad Request`.
+* The API must handle invalid data as a validation error.
 
 ### Actual Result
-- HTTP `500 Internal Server Error`.
-- Body observado: `Internal Server Error`.
+
+* HTTP `500 Internal Server Error`.
+* Observed body: `Internal Server Error`.
 
 ### Assertions
-1. Status code esperado = `400`.
+
+1. Expected status code = `400`.
 
 ### Status
+
 **FAIL**
 
 ### Defect
+
 **BUG-004 — Zero or negative price causes 500 Internal Server Error**
 
 ---
 
 ## TC-API-013 — Create booking with 200-character name
 
-**Type:** Boundary / Positive validation  
+**Type:** Boundary / Positive validation
+
 **Priority:** Medium
 
 ### Objective
-Verificar el comportamiento de la API ante un nombre con una longitud de 200 caracteres.
+
+Verify the behavior of the API with a name length of 200 characters.
 
 ### Preconditions
-La API está disponible.
+
+The API is available.
 
 ### Request
+
 ```http
 POST /booking
+
 ```
 
 ### Test Data
-`firstname` con 200 caracteres.
+
+`firstname` with 200 characters.
 
 ### Steps
-1. Enviar la reserva con un nombre de 200 caracteres.
-2. Observar el status code.
-3. Validar el resultado del test configurado en Postman.
+
+1. Send the booking with a 200-character name.
+2. Observe the status code.
+3. Validate the test result configured in Postman.
 
 ### Expected Result
-- La API debe comportarse de acuerdo con el límite funcional definido para el campo.
-- En esta ejecución el criterio configurado fue validar una respuesta exitosa.
+
+* The API should behave according to the functional limit defined for the field.
+* In this execution, the configured criterion was to validate a successful response.
 
 ### Actual Result
-- HTTP `200 OK`.
-- La assertion configurada para el status code pasa.
+
+* HTTP `200 OK`.
+* The assertion configured for the status code passes.
 
 ### Assertions
+
 1. Status code = `200`.
 
 ### Status
+
 **PASS**
 
 ### Defect
+
 N/A
 
 ---
 
-# 4. Resumen de ejecución
+# 4. Execution Summary
 
-## Método utilizado
+## Method Used
 
-| Método | Cantidad |
-|---|---:|
+| Method | Count |
+| --- | --- |
 | GET | 3 |
 | POST | 9 |
 | PUT | 1 |
@@ -648,13 +816,13 @@ N/A
 
 ---
 
-# 5. Defectos detectados
+# 5. Defects Found
 
-| Bug ID | Test Case | Defecto | Severity propuesta |
-|---|---|---|---|
-| BUG-001 | TC-API-007 | Campo requerido ausente provoca HTTP 500 | High |
-| BUG-002 | TC-API-009 | Fecha inválida aceptada y transformada en valores inválidos | High |
-| BUG-003 | TC-API-010 | Check-in posterior a checkout aceptado | High |
-| BUG-004 | TC-API-012 | Precio 0/negativo provoca HTTP 500 | High |
+| Bug ID | Test Case | Defect | Proposed Severity |
+| --- | --- | --- | --- |
+| BUG-001 | TC-API-007 | Missing required field causes HTTP 500 | High |
+| BUG-002 | TC-API-009 | Invalid date accepted and transformed into invalid values | High |
+| BUG-003 | TC-API-010 | Check-in after checkout accepted | High |
+| BUG-004 | TC-API-012 | Zero/negative price causes HTTP 500 | High |
 
-**TC-API-011:** clasificación pendiente debido a faltas de requisitos.
+**TC-API-011:** Classification pending due to missing requirements.
