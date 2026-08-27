@@ -1,4 +1,4 @@
-# Test Plan — Project 03 SQL Database Testing
+
 
 ## Objective
 Validate the integrity and consistency of data stored in `Northwind_Portfolio` using SQL queries designed from a QA perspective.
