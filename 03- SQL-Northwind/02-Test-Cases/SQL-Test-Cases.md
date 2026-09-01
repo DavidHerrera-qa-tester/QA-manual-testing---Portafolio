@@ -251,17 +251,8 @@ WHERE Discontinued = 1;
 **Status:** PASS  
 **QA:** Validates status-flag data.
 
-## TC-SQL-018 — Not executed
-The average-price query was intentionally excluded from the final execution.
 
-```sql
-SELECT AVG(UnitPrice) AS AveragePrice
-FROM Products;
-```
-
-**Status:** NOT EXECUTED
-
-## TC-SQL-019 — Identify the most expensive product
+## TC-SQL-018 — Identify the most expensive product
 **Type:** Boundary / Sorting  
 **Priority:** Medium
 
@@ -275,7 +266,7 @@ ORDER BY UnitPrice DESC;
 **Status:** PASS  
 **QA:** Combines `TOP 1` with descending sort.
 
-## TC-SQL-020 — Verify all customers and their order counts
+## TC-SQL-019 — Verify all customers and their order counts
 **Type:** Data integrity / LEFT JOIN / Aggregation  
 **Priority:** High
 
@@ -296,9 +287,8 @@ ORDER BY TotalOrders DESC;
 
 ## Execution summary
 
-- Planned: 20
+- Planned: 19
 - Executed: 19
 - PASS: 19
 - FAIL: 0
-- Not executed: TC-SQL-018
 - Confirmed defects: 0
