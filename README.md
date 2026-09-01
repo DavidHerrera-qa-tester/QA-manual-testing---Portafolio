@@ -20,7 +20,7 @@ My focus is on:
 ### Project 01 — E-commerce Web Testing | SauceDemo
 Manual testing project focused on functional testing, UI validation, browser/device compatibility and defect reporting.
 
-🔗 [View Project](./project-01-ecommerce-web)
+🔗 [View Project](/01-%20Ecommerce-webb) 
 
 ### Project 02 — API Testing | Restful-Booker
 API testing project using Postman, covering HTTP methods, response validation, assertions, positive/negative testing and API defect reporting.
