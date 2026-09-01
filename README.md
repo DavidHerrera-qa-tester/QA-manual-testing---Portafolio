@@ -30,7 +30,7 @@ API testing project using Postman, covering HTTP methods, response validation, a
 ### Project 03 — SQL Database Testing | Northwind
 SQL testing project using Microsoft SQL Server and the Northwind sample database. Includes data validation, JOINs, aggregation, boundary checks and data-integrity testing.
 
-🔗 [View Project](./project-03-sql-testing)
+🔗 [View Project](https://github.com/DavidHerrera-qa-tester/QA-manual-testing---Portafolio/tree/main/03-%20SQL-Northwind)
 
 ## Tools & Technologies
 
