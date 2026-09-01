@@ -39,18 +39,3 @@ The project focuses on data validation, filtering, aggregation, relational integ
 - Boundary testing
 - Data-quality and referential-integrity validation
 
-## QA Approach
-
-The key idea is to use SQL as a verification tool:
-
-```text
-Expected database state
-        ↓
-SQL validation query
-        ↓
-Actual result
-        ↓
-PASS / FAIL
-        ↓
-Bug report when expected ≠ actual
-```
