@@ -52,11 +52,9 @@ GO
 -- TC-SQL-017
 SELECT ProductID, ProductName, Discontinued FROM Products WHERE Discontinued = 1;
 GO
--- TC-SQL-018 NOT EXECUTED
--- SELECT AVG(UnitPrice) AS AveragePrice FROM Products;
--- TC-SQL-019
+-- TC-SQL-018
 SELECT TOP 1 ProductID, ProductName, UnitPrice FROM Products ORDER BY UnitPrice DESC;
 GO
--- TC-SQL-020
+-- TC-SQL-019
 SELECT c.CustomerID, c.CompanyName, COUNT(o.OrderID) AS TotalOrders FROM Customers AS c LEFT JOIN Orders AS o ON c.CustomerID = o.CustomerID GROUP BY c.CustomerID, c.CompanyName ORDER BY TotalOrders DESC;
 GO
