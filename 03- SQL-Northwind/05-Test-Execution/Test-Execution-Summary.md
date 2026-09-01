@@ -10,7 +10,6 @@
 | Executed | 19 |
 | PASS | 19 |
 | FAIL | 0 |
-| Not executed | 1 |
 | Confirmed defects | 0 |
 
 ## Not executed
