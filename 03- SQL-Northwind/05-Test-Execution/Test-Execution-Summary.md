@@ -11,3 +11,8 @@
 | PASS | 19 |
 | FAIL | 0 |
 | Confirmed defects | 0 |
+
+## Approval
+| Role | Name | Status |
+|---|---|---|
+| QA tester | David Herrera | Draft |
