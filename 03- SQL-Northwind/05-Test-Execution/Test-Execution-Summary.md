@@ -11,6 +11,3 @@
 | PASS | 19 |
 | FAIL | 0 |
 | Confirmed defects | 0 |
-
-## Not executed
-`TC-SQL-018` was intentionally excluded.
