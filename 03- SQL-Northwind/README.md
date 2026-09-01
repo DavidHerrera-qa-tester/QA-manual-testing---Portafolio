@@ -18,21 +18,9 @@ The project focuses on data validation, filtering, aggregation, relational integ
 | Executed | 19 |
 | Passed | 19 |
 | Failed | 0 |
-| Not executed | TC-SQL-018 |
 | Confirmed SQL defects | 0 |
 
-## Structure
-
-```text
-project-03-sql-testing/
-├── README.md
-├── 01-Test-Plan/
-├── 02-Test-Cases/
-├── 03-SQL-Queries/
-├── 04-Bug-Reports/
-├── 05-Test-Execution/
-└── 06-Evidence/
-```
+## 
 
 ## Skills Demonstrated
 
