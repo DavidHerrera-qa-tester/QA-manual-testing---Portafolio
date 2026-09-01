@@ -40,5 +40,17 @@ Base URL: https://restful-booker.herokuapp.com
 | PUT | Update a booking |
 | DELETE | Delete a booking |
 
+## ¡The skills I gained!
+- REST API fundamentals
+- HTTP methods and status codes
+- JSON request/response bodies
+- Postman
+- JavaScript assertions
+- Positive and negative API testing
+- Data and business-rule validation
+- Variables and request chaining
+- Defect reporting
+- Test evidence and documentation
+
 
 
