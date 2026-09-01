@@ -25,7 +25,7 @@ Manual testing project focused on functional testing, UI validation, browser/dev
 ### Project 02 — API Testing | Restful-Booker
 API testing project using Postman, covering HTTP methods, response validation, assertions, positive/negative testing and API defect reporting.
 
-🔗 [View Project](./project-02-api-testing)
+🔗 [View Project]([./project-02-api-testing](https://github.com/DavidHerrera-qa-tester/QA-manual-testing---Portafolio/tree/main/02-%20API-Restful-booker))
 
 ### Project 03 — SQL Database Testing | Northwind
 SQL testing project using Microsoft SQL Server and the Northwind sample database. Includes data validation, JOINs, aggregation, boundary checks and data-integrity testing.
